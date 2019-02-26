@@ -1,6 +1,5 @@
 nn_basic_scratch.py
 np.py
-sigmoid.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

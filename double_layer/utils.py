@@ -1,6 +1,13 @@
 import numpy as np
 from scipy.stats import truncnorm
 
+@np.vectorize
+def sigmoid(x,y_range=1,y_shift=0,x_shift=0):
+    return (y_range / (1 + np.exp(-x + x_shift))) + y_shift
+
+def transposed_vector(arr):
+    return np.array(arr).T
+
 # gives clean normal distribution
 def truncated_normal(mean=0,sd=1,low=0,upper=10):
     return truncnorm( 
